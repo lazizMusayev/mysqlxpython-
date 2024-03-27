@@ -1,7 +1,7 @@
 import mysql.connector
 import hashlib
 
-# Подключение к базе данных MySQL
+
 conn = mysql.connector.connect(
     host="127.0.0.1 ",
     user="root",
@@ -10,7 +10,7 @@ conn = mysql.connector.connect(
 )
 cursor = conn.cursor()
 
-# Создание таблицы users
+
 cursor.execute('''CREATE TABLE IF NOT EXISTS users
                   (id INT AUTO_INCREMENT PRIMARY KEY, username VARCHAR(20) UNIQUE, password VARCHAR(8))''')
 
